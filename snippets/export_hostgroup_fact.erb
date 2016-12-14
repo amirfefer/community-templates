@@ -1,0 +1,8 @@
+<%#
+kind: snippet
+name: export_hostgroup_fact
+description: this snippet export foreman hostgroup for hostgroup provisioning, hence when the machine registered with Foreman, it will associate with this hostgroup. 
+%>
+<% if @provisioning_type == 'hostgroup' -%>
+export FACTER_foreman_hostgroup=<%= @host.title %>
+<% end -%>
